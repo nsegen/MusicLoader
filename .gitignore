@@ -15,6 +15,7 @@
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
+.idea
 /out/
 
 ### Maven ###

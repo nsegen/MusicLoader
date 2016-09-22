@@ -1,5 +1,7 @@
 package me.nsegen.musicloader.services;
 
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
@@ -10,6 +12,8 @@ import java.util.Scanner;
  * Created by root on 15.9.16.
  */
 public class MusicListReader {
+
+    private static final Logger log = Logger.getLogger(MusicListReader.class);
 
     private String pathToFile;
 

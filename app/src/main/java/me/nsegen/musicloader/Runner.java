@@ -1,6 +1,6 @@
-package me.nsegen.musicloader.services;
+package me.nsegen.musicloader;
 
-import me.nsegen.musicloader.services.services.MusicListReader;
+import me.nsegen.musicloader.services.MusicListReader;
 import org.apache.log4j.Logger;
 
 import java.io.FileNotFoundException;

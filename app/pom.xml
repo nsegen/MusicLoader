@@ -19,6 +19,12 @@
             <version>1.2.17</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
 
         <dependency>
             <!-- jsoup HTML parser library @ http://jsoup.org/ -->
@@ -49,7 +55,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>me.nsegen.musicloader.Runner</mainClass>
+                            <mainClass>me.nsegen.musicloader.services.Runner</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>dependency-jars/</classpathPrefix>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>

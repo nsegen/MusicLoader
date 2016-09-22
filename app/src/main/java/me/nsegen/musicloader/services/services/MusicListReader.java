@@ -1,4 +1,4 @@
-package me.nsegen.musicloader.services;
+package me.nsegen.musicloader.services.services;
 
 import org.apache.log4j.Logger;
 

@@ -1,8 +1,6 @@
-package me.nsegen.musicloader.services;
+package me.nsegen.musicloader.services.services;
 
 import org.apache.log4j.Logger;
-
-import java.util.List;
 
 /**
  * Created by root on 15.9.16.

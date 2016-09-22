@@ -1,4 +1,4 @@
-package me.nsegen.musicloader.services;
+package me.nsegen.musicloader.services.services;
 
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -22,7 +22,7 @@ public class HTMLParser {
         List<String> links = new LinkedList<>();
         tracks.forEach(track -> {
             try {
-                Document page = Jsoup.connect(searchURLTemplate + track).get();
+                Document page = Jsoup.connect(searchURLTemplate + track.replace(" ", "%20%")).get();
                 Element linkTag = page.select("span[data-url]").first();
                 links.add(linkTag.attr("data-url"));
             } catch (IOException e) {

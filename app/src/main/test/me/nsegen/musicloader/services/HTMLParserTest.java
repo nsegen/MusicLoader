@@ -1,6 +1,6 @@
 package me.nsegen.musicloader.services;
 
-import me.nsegen.musicloader.services.services.HTMLParser;
+import me.nsegen.musicloader.services.HTMLParser;
 import org.junit.Before;
 import org.junit.Test;
 

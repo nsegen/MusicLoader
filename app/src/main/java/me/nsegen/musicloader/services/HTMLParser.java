@@ -22,11 +22,11 @@ public class HTMLParser {
         List<String> links = new LinkedList<>();
         tracks.forEach(track -> {
             try {
-                Document page = Jsoup.connect(searchURLTemplate + track.replace(" ", "%20%")).get();
+                Document page = Jsoup.connect(searchURLTemplate + track.replace(" ", "%20")).get();
                 Element linkTag = page.select("span[data-url]").first();
                 links.add(linkTag.attr("data-url"));
             } catch (IOException e) {
-                log.warn(searchURLTemplate + track + " is not found.");
+                log.warn(searchURLTemplate + track.replace(" ", "%20") + " is not found.");
             }
         });
         return links;

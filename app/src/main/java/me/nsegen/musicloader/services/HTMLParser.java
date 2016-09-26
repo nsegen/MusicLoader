@@ -16,15 +16,16 @@ public class HTMLParser {
 
     private static final Logger log = Logger.getLogger(HTMLParser.class);
 
-    private String searchURLTemplate = "http://zf.fm/mp3/search?keywords=";
+    private String searchURLTemplate = "http://mixpromo.net/search/";
 
     public List<String> getLinksToTracks(List<String> tracks){
         List<String> links = new LinkedList<>();
         tracks.forEach(track -> {
             try {
                 Document page = Jsoup.connect(searchURLTemplate + track.replace(" ", "%20")).get();
-                Element linkTag = page.select("span[data-url]").first();
-                links.add(linkTag.attr("data-url"));
+                //log.warn(page.outerHtml());
+                Element linkTag = page.select("a.x-icon-download").first();
+                links.add(linkTag.attr("href"));
             } catch (IOException e) {
                 log.warn(searchURLTemplate + track.replace(" ", "%20") + " is not found.");
             }

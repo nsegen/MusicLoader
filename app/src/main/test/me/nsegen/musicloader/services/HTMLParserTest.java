@@ -53,17 +53,17 @@ public class HTMLParserTest {
 //            map.forEach((key, value) -> cookies.put(key, value.toString().replace("[", "").replace("]", "")));
             //String cookie = con.getHeaderField("Set-Cookie");
             doc = Jsoup.connect("http://zf.fm/mp3/search?keywords=rammstein%20rosenrot")
-                    .userAgent("Ubuntu Chromium/52.0.2743.116")
-                    .cookie("last_visit", "1474900441086::1474911241086")
-                    .cookie("ZvcurrentVolume", "100")
-                    .cookie("PHPSESSID", "kkkk9ojabfbohog9q9bhsko2n4")
+                    //.userAgent("Ubuntu Chromium/52.0.2743.116")
+                    //.cookie("last_visit", "1474900441086::1474911241086")
+                    //.cookie("ZvcurrentVolume", "100")
+                    //.cookie("PHPSESSID", "kkkk9ojabfbohog9q9bhsko2n4")
                     .cookie("zvAuth", "1")
-                    .cookie("zvLang", "0")
-                    .cookie("_ym_uid", "1474911055698148053")
-                    .cookie("_ym_isad", "1")
-                    .cookie("notice", "11")
-                    .cookie("_ga", "GA1.2.155656012.1474911055")
-                    .cookie("_ga", "GA1.2.155656012.1474911055")
+                    //.cookie("zvLang", "0")
+                    //.cookie("_ym_uid", "1474911055698148053")
+                    //.cookie("_ym_isad", "1")
+                    //.cookie("notice", "11")
+                    //.cookie("_ga", "GA1.2.155656012.1474911055")
+                    //.cookie("_ga", "GA1.2.155656012.1474911055")
                     //.cookie(cookies.get("Set-Cookie"))
                     .get();
         } catch (IOException e) {

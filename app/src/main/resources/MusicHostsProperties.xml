@@ -1,0 +1,24 @@
+<sites>
+    <site host="zv.fm" search-template="/mp3/search?keywords=">
+        <cookies>
+            <cookie key="zvAuth" value="1"/>
+        </cookies>
+        <html-element tag="span" class="song-download btn4 download">
+
+            <attr name="data-tool" value="tooltip"/>
+            <attr name="data-original-title" value="Скачать"/>
+
+            <link-attr>
+                data-url
+            </link-attr>
+
+        </html-element>
+    </site>
+    <site host="mixpromo.net" search-template="/search/">
+        <html-element tag="a" class="x-icon-download">
+            <link-attr>
+                href
+            </link-attr>
+        </html-element>
+    </site>
+</sites>

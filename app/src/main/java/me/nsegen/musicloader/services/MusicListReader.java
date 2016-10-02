@@ -1,12 +1,17 @@
 package me.nsegen.musicloader.services;
 
+import me.nsegen.musicloader.entities.Track;
+import me.nsegen.musicloader.utils.SAXParserListOfTracksHandler;
 import org.apache.log4j.Logger;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created by root on 15.9.16.
@@ -17,27 +22,42 @@ public class MusicListReader {
 
     private String pathToFile;
 
-    private final String ALL_TRACK_FLAG = "--all";
-
-    private List<String> trackList;
+    private List<Track> trackList;
     private List<String> singerList;
 
-    public MusicListReader(String path){
-        pathToFile = new String(path);
-    }
+    private SAXParserFactory factory;
+    private SAXParser parser;
+    private SAXParserListOfTracksHandler saxParserListOfTracksHandler;
 
-    public void read() throws FileNotFoundException{
+    private static MusicListReader musicListReader;
+
+
+    private MusicListReader() {
+        pathToFile = "";
         trackList = new LinkedList<>();
         singerList = new LinkedList<>();
-        Scanner sc = new Scanner(new File(pathToFile));
-        while(sc.hasNext()){
-            String rowInFile = sc.nextLine();
-            if(rowInFile.contains(ALL_TRACK_FLAG)){
-                singerList.add(rowInFile);
-            } else {
-                trackList.add(rowInFile);
-            }
+        factory = SAXParserFactory.newInstance();
+    }
+
+    public static MusicListReader getInstance() {
+        if(musicListReader == null){
+            musicListReader = new MusicListReader();
         }
+        return musicListReader;
+    }
+
+    public void read() throws IOException, SAXException {
+
+        try {
+            parser = factory.newSAXParser();
+            saxParserListOfTracksHandler = new SAXParserListOfTracksHandler();
+            parser.parse(new File(pathToFile), saxParserListOfTracksHandler);
+            trackList = saxParserListOfTracksHandler.getTracks();
+            singerList = saxParserListOfTracksHandler.getSingersWithAllTracks();
+        } catch (ParserConfigurationException e) {
+
+        }
+
     }
 
     public String getPathToFile() {
@@ -48,7 +68,7 @@ public class MusicListReader {
         this.pathToFile = pathToFile;
     }
 
-    public List<String> getTrackList() {
+    public List<Track> getTrackList() {
         return new LinkedList<>(trackList);
     }
 

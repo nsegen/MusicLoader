@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<singers>
+    <singer name="Rammstein">
+        <tracks>
+            <track name="Rosenrot" />
+            <track name="Main Land" />
+        </tracks>
+    </singer>
+    <singer name="БИ-2" isAll="true"/>
+</singers>

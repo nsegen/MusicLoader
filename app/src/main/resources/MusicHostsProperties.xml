@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sites>
-    <site host="http://www.zv.fm" search-template="/mp3/search?keywords=<<<singerName>>>%20<<<trackName>>>">
+    <site host="http://www.zv.fm" search-template="/mp3/search?keywords=~singerName~%20~trackName~">
         <cookies>
             <cookie key="zvAuth" value="1"/>
         </cookies>
@@ -11,7 +11,7 @@
 
         </html-element>
     </site>
-    <site host="http://www.mixpromo.net" search-template="/search/<<<singerName>>>%20<<<trackName>>>">
+    <site host="http://www.mixpromo.net" search-template="/search/~singerName~%20~trackName~">
         <html-element tag="a" class="x-icon-download" link-attr="href"/>
     </site>
 </sites>

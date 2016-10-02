@@ -28,14 +28,14 @@ public class HTMLParser {
 
     private List<ConnectionProperties> connectionPropertiesList;
 
-    public HTMLParser(File propertiesFile) throws IOException {
+    public HTMLParser(File propertiesFile) throws IOException, SAXException {
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser parser = factory.newSAXParser();
             SAXParserSitesPropertiesHandler SAXParserSitesPropertiesHandler = new SAXParserSitesPropertiesHandler();
             parser.parse(propertiesFile, SAXParserSitesPropertiesHandler);
             connectionPropertiesList = SAXParserSitesPropertiesHandler.getConnectionProperties();
-        } catch (SAXException | ParserConfigurationException e) {
+        } catch (ParserConfigurationException e) {
 
         }
 
@@ -43,8 +43,8 @@ public class HTMLParser {
 
     private String getLinkToTrack(ConnectionProperties connectionProperties, Track track){
         String link = null;
-        String searchRequest = connectionProperties.getSearchTemplate().replace("<<<singerName>>>", track.getSingerName());
-        searchRequest = searchRequest.replace("<<<trackName>>>", track.getTrackName());
+        String searchRequest = connectionProperties.getSearchTemplate().replace("~singerName~", track.getSingerName());
+        searchRequest = searchRequest.replace("~trackName~", track.getTrackName());
         searchRequest = connectionProperties.getHost() + searchRequest.replace(" ", "%20");
 
         try {

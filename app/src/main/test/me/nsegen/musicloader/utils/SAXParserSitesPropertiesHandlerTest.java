@@ -36,9 +36,9 @@ public class SAXParserSitesPropertiesHandlerTest {
         List<ConnectionProperties> list = SAXParserSitesPropertiesHandler.getConnectionProperties();
         Assert.assertEquals(list.size(), 2);
         Assert.assertEquals(list.get(0).getHost(), "http://www.zv.fm");
-        Assert.assertEquals(list.get(0).getSearchTemplate(), "/mp3/search?keywords=");
+        Assert.assertEquals(list.get(0).getSearchTemplate(), "/mp3/search?keywords=~singerName~%20~trackName~");
         Assert.assertEquals(list.get(1).getHost(), "http://www.mixpromo.net");
-        Assert.assertEquals(list.get(1).getSearchTemplate(), "/search/");
+        Assert.assertEquals(list.get(1).getSearchTemplate(), "/search/~singerName~%20~trackName~");
     }
 
 }

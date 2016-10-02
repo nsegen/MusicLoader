@@ -6,5 +6,10 @@
             <track name="Main Land" />
         </tracks>
     </singer>
+    <singer name="План Ломоносова">
+        <track name="Х"/>
+        <track name="Визор"/>
+        <track name="Марш муравьев"/>
+    </singer>
     <singer name="БИ-2" isAll="true"/>
 </singers>

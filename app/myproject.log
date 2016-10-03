@@ -2261,3 +2261,18 @@
 13:55:54,049  WARN main HTMLParser:getLinkToTrack:57 - http://www.mixpromo.net/search/Rammstein%20Main%20land is not found.
 13:55:59,912  WARN main HTMLParser:getLinkToTrack:57 - http://www.mixpromo.net/search/Rammstein%20Rosenrot is not found.
 13:56:01,091  WARN main HTMLParser:getLinkToTrack:57 - http://www.mixpromo.net/search/Rammstein%20Main%20land is not found.
+10:40:36,900  WARN main Loader:downloadTrack:70 - track Rammstein - Rosenrotdoesn't download:java.io.FileNotFoundException: ~/Music (Нет такого файла или каталога)
+10:40:38,113  WARN main Loader:downloadTrack:70 - track План Ломоносова - Визорdoesn't download:java.io.FileNotFoundException: ~/Music (Нет такого файла или каталога)
+10:40:38,715  WARN main Loader:downloadTrack:70 - track Rammstein - Main Landdoesn't download:java.io.FileNotFoundException: ~/Music (Нет такого файла или каталога)
+10:41:07,756  WARN main Loader:downloadTrack:70 - track План Ломоносова - Марш муравьевdoesn't download:java.io.FileNotFoundException: ~/Music (Нет такого файла или каталога)
+10:41:08,359  WARN main Loader:downloadTrack:70 - track План Ломоносова - Хdoesn't download:java.io.FileNotFoundException: ~/Music (Нет такого файла или каталога)
+10:41:29,885  WARN main Loader:downloadTrack:70 - track Rammstein - Rosenrotdoesn't download:java.io.FileNotFoundException: ~/Музыка (Нет такого файла или каталога)
+10:41:31,493  WARN main Loader:downloadTrack:70 - track План Ломоносова - Визорdoesn't download:java.io.FileNotFoundException: ~/Музыка (Нет такого файла или каталога)
+10:41:37,411  WARN main Loader:downloadTrack:70 - track Rammstein - Main Landdoesn't download:java.io.FileNotFoundException: ~/Музыка (Нет такого файла или каталога)
+10:41:38,403  WARN main Loader:downloadTrack:70 - track План Ломоносова - Марш муравьевdoesn't download:java.io.FileNotFoundException: ~/Музыка (Нет такого файла или каталога)
+10:41:40,385  WARN main Loader:downloadTrack:70 - track План Ломоносова - Хdoesn't download:java.io.FileNotFoundException: ~/Музыка (Нет такого файла или каталога)
+10:42:37,992  WARN main Loader:downloadTrack:70 - track Rammstein - Rosenrotdoesn't download:java.io.FileNotFoundException: /home/nsegen/Музыка (Это каталог)
+10:42:38,790  WARN main Loader:downloadTrack:70 - track План Ломоносова - Визорdoesn't download:java.io.FileNotFoundException: /home/nsegen/Музыка (Это каталог)
+10:42:39,311  WARN main Loader:downloadTrack:70 - track Rammstein - Main Landdoesn't download:java.io.FileNotFoundException: /home/nsegen/Музыка (Это каталог)
+10:42:40,024  WARN main Loader:downloadTrack:70 - track План Ломоносова - Марш муравьевdoesn't download:java.io.FileNotFoundException: /home/nsegen/Музыка (Это каталог)
+10:42:40,663  WARN main Loader:downloadTrack:70 - track План Ломоносова - Хdoesn't download:java.io.FileNotFoundException: /home/nsegen/Музыка (Это каталог)
